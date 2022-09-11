@@ -1,0 +1,22 @@
+{
+  "name": "do-they-have-ac-server",
+  "version": "1.0.0",
+  "description": "JSON server for Do They Have AC app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allisonbusse/do-they-have-ac-server.git"
+  },
+  "author": "Allison Busse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allisonbusse/do-they-have-ac-server/issues"
+  },
+  "homepage": "https://github.com/allisonbusse/do-they-have-ac-server#readme",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
