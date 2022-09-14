@@ -1,10 +1,17 @@
-const jsonServer = require('json-server');
-const server = jsonServer.create();
-const router = jsonServer.router('db.json'); 
-const middlewares = jsonServer.defaults();
-const port = process.env.PORT || 3200; 
+import express from 'express';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import dotenv from 'dotenv';
+import locationRoutes from './routes/locations.js';
 
-server.use(middlewares);
-server.use(router);
+const app = express();
+dotenv.config();
 
-server.listen(port);
+app.use(bodyParser.json({ limit: "40mb", extended: true }));
+app.use(bodyParser.urlencoded({ limit: "40mb", extended: true }));
+app.use(cors());
+app.use('/locations', locationRoutes);
+
+const PORT = process.env.PORT || 3200;
+
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
