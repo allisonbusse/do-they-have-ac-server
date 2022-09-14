@@ -1,9 +1,11 @@
 {
   "name": "do-they-have-ac-server",
   "version": "1.0.0",
-  "description": "JSON server for Do They Have AC app",
+  "description": "Express server for Do They Have AC app",
   "main": "server.js",
+  "type": "module",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +19,11 @@
   },
   "homepage": "https://github.com/allisonbusse/do-they-have-ac-server#readme",
   "dependencies": {
-    "json-server": "^0.17.0"
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongodb": "^4.9.1",
+    "nodemon": "^2.0.7"
   }
 }
